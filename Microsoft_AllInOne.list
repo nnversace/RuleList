@@ -1,0 +1,120 @@
+# Microsoft_AllInOne.list
+# Purpose : Single-file Microsoft RULE-SET for Surge
+# Author  : nnversace
+# Updated : 2025-09-05
+
+##########
+# NCSI / Connectivity (Network icon “no Internet” probes)
+##########
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN,dns.msftncsi.com
+
+##########
+# Windows Update & Delivery Optimization (DO)
+##########
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,update.microsoft.com
+DOMAIN,ctldl.windowsupdate.com
+DOMAIN,download.windowsupdate.com
+DOMAIN-SUFFIX,au.windowsupdate.com
+DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
+DOMAIN-SUFFIX,delivery.mp.microsoft.com
+DOMAIN,tsfe.trafficshaping.dsp.mp.microsoft.com
+DOMAIN-SUFFIX,prod.do.dsp.mp.microsoft.com
+DOMAIN-SUFFIX,do.dsp.mp.microsoft.com
+DOMAIN-SUFFIX,displaycatalog.mp.microsoft.com
+DOMAIN,adl.windows.com
+DOMAIN-SUFFIX,api.cdp.microsoft.com
+
+##########
+# Microsoft Store / WNS
+##########
+DOMAIN,storeedgefd.dsx.mp.microsoft.com
+DOMAIN,livetileedge.dsx.mp.microsoft.com
+DOMAIN-SUFFIX,wns.windows.com
+DOMAIN,storecatalogrevocation.storequality.microsoft.com
+DOMAIN-SUFFIX,aka.ms
+
+##########
+# OneDrive (personal + common deps)
+##########
+DOMAIN,onedrive.live.com
+DOMAIN-SUFFIX,live.com
+DOMAIN,g.live.com
+DOMAIN,oneclient.sfx.ms
+DOMAIN,logincdn.msauth.net
+# Enterprise/EDU:
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,sharepoint-df.com
+
+##########
+# Teams
+##########
+DOMAIN-SUFFIX,teams.microsoft.com
+DOMAIN,config.teams.microsoft.com
+DOMAIN,teams.live.com
+DOMAIN,teams.events.data.microsoft.com
+DOMAIN,statics.teams.cdn.live.net
+
+##########
+# Microsoft 365 Core (sign-in / portals / CDN / Outlook / Graph)
+##########
+# Identity / sign-in
+DOMAIN,login.microsoftonline.com
+DOMAIN,login.live.com
+DOMAIN-SUFFIX,windows.net
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msauthimages.net
+# Office portal & apps
+DOMAIN,www.office.com
+DOMAIN,officeclient.microsoft.com
+DOMAIN-SUFFIX,officeapps.live.com
+DOMAIN-SUFFIX,cdn.office.net
+DOMAIN-SUFFIX,officecdn.microsoft.com
+DOMAIN-SUFFIX,officecdn.microsoft.com.edgesuite.net
+# Outlook / Exchange Online
+DOMAIN-SUFFIX,outlook.office.com
+DOMAIN-SUFFIX,outlook.office365.com
+DOMAIN-SUFFIX,outlook.com
+# Graph
+DOMAIN,graph.microsoft.com
+# Telemetry commonly seen with Office/Edge
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,ecs.nel.measure.office.net
+DOMAIN,msedge.api.cdp.microsoft.com
+
+##########
+# Xbox / Xbox Live (content & download endpoints)
+##########
+DOMAIN-SUFFIX,xboxlive.com
+DOMAIN-SUFFIX,xboxservices.com
+DOMAIN-SUFFIX,xbox.com
+DOMAIN-SUFFIX,assets.xbox.com
+DOMAIN-SUFFIX,assets1.xboxlive.com
+DOMAIN-SUFFIX,assets2.xboxlive.com
+DOMAIN-SUFFIX,dlassets.xboxlive.com
+DOMAIN-SUFFIX,dlassets2.xboxlive.com
+DOMAIN-SUFFIX,d1.xboxlive.com
+DOMAIN-SUFFIX,d2.xboxlive.com
+DOMAIN-SUFFIX,xvcb1.xboxlive.com
+DOMAIN-SUFFIX,xvcb2.xboxlive.com
+DOMAIN-SUFFIX,xvcf1.xboxlive.com
+DOMAIN-SUFFIX,xvcf2.xboxlive.com
+DOMAIN,xvc-origin.xboxlive.com
+DOMAIN,dlassets-ssl.xboxlive.com
+
+##########
+# General Microsoft domains (fallback)
+##########
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,msedge.net
+DOMAIN-SUFFIX,msn.com
+DOMAIN-SUFFIX,live.net
+
+##########
+# ASN fallback (Microsoft corp ASNs)
+##########
+IP-ASN,AS8075,no-resolve
+IP-ASN,AS8068,no-resolve
