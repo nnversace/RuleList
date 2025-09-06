@@ -1,0 +1,49 @@
+# YouTube_AllInOne.list
+# Purpose : Single-file YouTube RULE-SET for Surge
+# Updated : 2025-09-06
+
+##########
+# Core sites (web + mobile + shortlink)
+##########
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN,studio.youtube.com
+DOMAIN,tv.youtube.com
+DOMAIN,m.youtube.com
+
+##########
+# YouTube Music / Kids / TV apps
+##########
+DOMAIN,music.youtube.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN,tv.youtube.com
+
+##########
+# Privacy-Enhanced embeds
+##########
+DOMAIN-SUFFIX,youtube-nocookie.com
+
+##########
+# Playback content (CDN for video/audio chunks)
+##########
+DOMAIN-SUFFIX,googlevideo.com       # r*.googlevideo.com / redirector / manifest 等
+DOMAIN,redirector.googlevideo.com
+DOMAIN,manifest.googlevideo.com
+
+##########
+# Static assets / thumbnails / avatars
+##########
+DOMAIN-SUFFIX,ytimg.com             # i.ytimg.com / s.ytimg.com / i9.ytimg.com …
+DOMAIN-SUFFIX,ggpht.com             # yt3.ggpht.com 头像等
+
+##########
+# Official APIs used by clients
+##########
+DOMAIN,youtubei.googleapis.com
+DOMAIN,youtube.googleapis.com
+DOMAIN,youtube-ui.l.google.com
+
+##########
+# Telemetry used by the player (无此域也能看，但建议一并路由以免行为异常)
+##########
+DOMAIN,s.youtube.com
