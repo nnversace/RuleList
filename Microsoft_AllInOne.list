@@ -91,13 +91,43 @@ DOMAIN-SUFFIX,sharepoint-df.com
 DOMAIN-SUFFIX,1drv.ms
 
 ##########
-# Teams（客户端配置 / 事件 / 静态资源）
+# Teams / Skype（客户端配置 / 事件 / 静态资源 / 实时通道）
 ##########
+# Teams 常用
 DOMAIN-SUFFIX,teams.microsoft.com
 DOMAIN,config.teams.microsoft.com
 DOMAIN,teams.live.com
 DOMAIN,teams.events.data.microsoft.com
 DOMAIN,statics.teams.cdn.office.net
+
+# Edge 实验/配置（Teams/Edge 同源服务）
+DOMAIN,config.edge.skype.com
+
+# Skype（Consumer）
+DOMAIN-SUFFIX,skype.com
+DOMAIN,login.skype.com
+DOMAIN,api.skype.com
+DOMAIN,ui.skype.com
+DOMAIN,apps.skype.com
+DOMAIN,pipe.skype.com              # Telemetry 管道
+# Skype Settings/ASM（含静态与 API）
+DOMAIN-SUFFIX,asm.skype.com
+DOMAIN,static.asm.skype.com
+DOMAIN,as-api.asm.skype.com
+# Skype 资源与下载/CDN
+DOMAIN-SUFFIX,skypeassets.com
+DOMAIN,secure.skypeassets.com
+DOMAIN,swx.cdn.skype.com
+DOMAIN,download.skype.com
+DOMAIN,metrics.skype.com
+# 旧 Messenger 网关（聊天/收件）
+DOMAIN,client-s.gateway.messenger.live.com
+DOMAIN,s.gateway.messenger.live.com
+# 实时推送通道（WebSocket / Event Delivery Framework）
+DOMAIN-SUFFIX,trouter.skype.com
+DOMAIN,go.trouter.skype.com
+DOMAIN,go.trouter.io
+DOMAIN-SUFFIX,drip.trouter.io
 
 ##########
 # Xbox / Xbox Live（内容与下载）
