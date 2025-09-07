@@ -1,0 +1,86 @@
+# Twitter / X - All-in-One (Surge Rule-Set)
+# Last-Updated: 2025-09-07
+# Scope: x.com / twitter.com 主站与 API、媒体CDN (twimg)、嵌入/发布组件、短链 t.co、Spaces/Periscope、X Pro(TweetDeck)、广告与分析、ASN
+# 用法示例：
+#   [Rule]
+#   RULE-SET,TwitterX_AllInOne,🕊 X
+#   RULE-SET,TwitterX_AllInOne,REJECT  # 如果你要封锁可改成 REJECT
+#
+# 说明：
+# - 为稳妥起见，主域名统一用 DOMAIN-SUFFIX，重要子域做显式补充；
+# - Spaces/Live 依赖历史 Periscope/pscp.tv 流媒体域；
+# - ASN 仅包含 Twitter/X 自有网络 (AS13414)，不额外拉 Fastly/Cloudflare 全网，避免误伤其他站点。
+
+###############
+# Core Web/API
+###############
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN,api.twitter.com
+DOMAIN,upload.twitter.com
+DOMAIN,mobile.twitter.com
+DOMAIN,m.twitter.com
+# 能力/配置域（少量使用）
+DOMAIN,caps.x.com
+
+###############
+# Shortener
+###############
+DOMAIN-SUFFIX,t.co
+
+#####################
+# Embeds / Widgets /
+# Publish & Cards
+#####################
+DOMAIN,platform.twitter.com
+DOMAIN,syndication.twitter.com
+DOMAIN,publish.twitter.com
+DOMAIN,cdn.syndication.twimg.com
+DOMAIN,syndication.twimg.com
+
+###############
+# Media / CDN
+###############
+DOMAIN-SUFFIX,twimg.com
+DOMAIN,abs.twimg.com
+DOMAIN,pbs.twimg.com
+DOMAIN,video.twimg.com
+DOMAIN,ton.twimg.com
+
+#################
+# Spaces / Live
+#################
+DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,periscope.tv
+# 常见区域化流地址（Fastly Anycast，列出前缀便于可读；匹配仍由上方 DOMAIN-SUFFIX 生效）
+DOMAIN,video.pscp.tv
+DOMAIN,prod-fastly-us-east-1.video.pscp.tv
+DOMAIN,prod-fastly-eu-central-1.video.pscp.tv
+DOMAIN,prod-fastly-eu-west-1.video.pscp.tv
+DOMAIN,prod-fastly-eu-west-3.video.pscp.tv
+
+##########################
+# X Pro / TweetDeck (Web)
+##########################
+DOMAIN,pro.x.com
+DOMAIN,pro.twitter.com
+DOMAIN,tweetdeck.twitter.com
+
+#####################
+# Ads / Analytics
+#####################
+DOMAIN,ads.twitter.com
+DOMAIN,ads-api.twitter.com
+DOMAIN,analytics.twitter.com
+
+#####################
+# Legacy/Other
+#####################
+# 老历史域，偶见回退/测试
+DOMAIN-SUFFIX,twttr.com
+
+########
+# ASN
+########
+# 仅匹配 Twitter/X 自有网络前缀，避免拉入第三方 CDN 全网
+IP-ASN,13414
